@@ -1,5 +1,5 @@
 title = "Rajat Khanna"
-baseURL = "https://legalimpurity.com"
+baseURL = "http://legalimpurity.com"
 tags = ["portfolio", "web design", "blog"]
 languageCode = "en-US"
 config = "config.toml"
