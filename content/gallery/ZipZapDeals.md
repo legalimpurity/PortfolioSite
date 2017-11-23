@@ -7,7 +7,7 @@ draft: false
 +++
 date = "2017-11-23T11:49:43+05:30"
 title = "VAKIL"
-image = "vakil.png"
+image = "/images/zzd_logo.png"
 alt = "ZipZapDeals logo"
 color = "#7ac143"
 link1 = "https://zipzapdeals.com/0/"
