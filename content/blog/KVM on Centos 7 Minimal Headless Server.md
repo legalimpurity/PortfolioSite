@@ -76,11 +76,11 @@ DNS1=192.168.1.1
 Please make sure that you **enter the appropriate static IP configuration in the file above**. I am assuming that the previous configuration was also for a static IP. Cause an headless server without a staticIP is just as dumb as it sounds.
 Now comes the scary part, we need to apply these settings by restarting the networking services. Again, as mentioned above please note that this might cause you to loose access to you server so either make sure that you have access to the server physically and are prepared to connect it back to a monitor and keyboard or if its a cloud server, you have no sensitive data on it and are ready to loose access to it forever.
 ```console
-systemctl restart NetowrkManager
+systemctl restart NetworkManager
 ```
-Now if you are still able to connect to your server after this command that means that you have successfully added a bridge to your cnfiguration. Congratulations.
+Now if you are still able to connect to your server after this command that means that you have successfully added a bridge to your configuration. Congratulations.
 ### 4. Downloading the virtual OS
-So, before we move on to launching a new VM, lets first download the image of a new VM and put it to the appropriate location. If you have SELinux enabled on you system, the directory enabled to hold virtualization iso’s and hard disk images is /var/lib/libvirt/images. So lets change directory to /var/lib/libvirt/ and chmod this folder as well for easier access. Also, for this tutorial, we are going to download the Centos image for setting up a virtual machine of Centos7. You can get the images at the URL mentioned below.
+So, before we move on to launching a new VM, lets first download the image of a new VM and put it to the appropriate location. If you have SELinux enabled on you system, the directory enabled to hold virtualisation iso’s and hard disk images is /var/lib/libvirt/images. So lets change directory to /var/lib/libvirt/ and chmod this folder as well for easier access. Also, for this tutorial, we are going to download the Centos image for setting up a virtual machine of Centos7. You can get the images at the URL mentioned below.
 ```console
 cd /var/lib/libvirt/
 sudo chmod -R 777 images
@@ -93,13 +93,13 @@ So after we are done downloading the respective OS image, what comes is launchin
 ```console
 virt-install --name centos7 --disk path="/var/lib/libvirt/images/cent7.img,size=20" --ram 2048 --vcpus 1 --os-type linux --os-variant centos7.0 --graphics vnc --cdrom "/var/lib/libvirt/images/CentOS-7-x86_64-Minimal-1511.iso" --network=bridge:br0
 ```
-This is to launch a VM of Centos7.Also, we are creating the hard disk img file in the same directory as where our iso lies. Reason for not going to other directory is that SELinux will have to be enabled for that directory.
+This is to launch a VM of Centos7. Also, we are creating the hard disk img file in the same directory as where our iso lies. Reason for not going to other directory is that SELinux will have to be enabled for that directory.
 
 Rest parameters are **self explanatory**, name is name of VM. Disk path is path were the hard disk file will reside. Ram, vcpus and os-type are ram, virtual cpus and os-type respectively. Now, os-variant command tells KVM what flavour of OS are you running on top of KVM. This was a problematic area cause the command given by all blogs to get a list of all os-variant types is :
 ```console
 virt-install --os-variant list
 ```
-Now, this command is not working on Centos 7.
+Now, this command is not working on Centos7.
 To get the type of OS variants available via kvm, use the following command.
 ```console
  osinfo-query os
