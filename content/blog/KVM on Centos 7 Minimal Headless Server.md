@@ -8,10 +8,10 @@ Hello All.
 
 I did not found any good post on this so I am writing about it. These posts also help me setup the development sever from scratch whenever it crashes for one or another reason. Please note that I keep security as top priority, so SELinux is always enabled on my system.
 
-So, I saw a couple of blog posts on how to setup on KVM on Centos 7. They all had the same flow. I will be following the same flow as well, but **also adding in my inputs as to what problems i faced with these commands and how did I solved them.** Well isn’t this always the case, you cant accomplish a task just by following one post. There is no one post that can exactly tell you how to get this work done. Let’s try to make this post not like one of those 😛
+So, I saw a couple of blog posts on how to setup on KVM on Centos7. They all had the same flow. I will be following the same flow as well, but **also adding in my inputs as to what problems i faced with these commands and how did I solved them.** Well isn’t this always the case, you cant accomplish a task just by following one post. There is no one post that can exactly tell you how to get this work done. Let’s try to make this post not like one of those 😛
 
 ### 1. Check virtualization
-Check that you system supports virtualization
+Check that you system supports virtualisation
 ```console
 $ grep -E '(vmx|svm)' /proc/cpuinfo
 ```
