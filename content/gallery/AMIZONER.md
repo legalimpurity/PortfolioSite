@@ -5,6 +5,6 @@ draft: false
 image: "amizoner.png"
 alt: "AMIZONER logo"
 color: "#EFEFEF"
-link1: "https://itunes.apple.com/in/app/amizoner/id607701882?mt=8"
+link1: "http://bit.ly/amizonerapp"
 link2: ""
 ---

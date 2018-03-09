@@ -6,6 +6,6 @@ title: "Resume"
 image: "logo/rk-logo-450.png"
 alt: "Resume Image"
 color: "#EFEFEF"
-link1: "https://drive.google.com/open?id=1bwCsFPyWFHpy8Y8f1L7dYHS_Q23ZTiGW"
+link1: "http://bit.ly/RajatsResumeV7"
 link2: ""
 ---

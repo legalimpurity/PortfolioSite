@@ -5,7 +5,7 @@ draft: true
 draft: false
 image: "home-automation.png"
 alt: "Home automation logo"
-color: "#263248"
+color: "#7ac143"
 link1: "http://mobile.monsterindia.com/"
 link2: ""
 ---
